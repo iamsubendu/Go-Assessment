@@ -1,0 +1,70 @@
+{{ define "Login" }}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Golang Login</title>
+</head>
+
+<body class="login">
+
+
+  <div class="container">
+
+    <div class="login-wrapo flex">
+
+      <div class="login-box">
+
+        <h2>Login</h2>
+
+        <form id="loginForm" action="/loginsubmit" method="POST">
+
+
+        <input type="text" name="emailId" required placeholder="Email ID">
+
+        <input type="password" name="password" required placeholder="Password">
+
+        <button type="submit" class="ripple cursor"> Login </button>
+
+        </form>
+
+        <p class="flex"> <a href="/register"> New user? </a> </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+
+
+  <script>
+    $('#loginForm').validate({ // initialize the plugin
+        rules: {
+          "emailId": {
+                required: true,
+                email: true
+            },
+            "password": {
+                required: true,
+            }
+        },
+        messages: {
+            "password": {
+                required: "Please, enter a password"
+            },
+            "emailId": {
+                required: "Please, enter an email",
+                email: "Email is invalid"
+            }
+        },
+        submitHandler: function (form) { 
+          form.submit();
+        }
+    });
+  </script>
+
+{{ end }}

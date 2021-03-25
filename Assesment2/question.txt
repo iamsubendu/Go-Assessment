@@ -1,0 +1,5 @@
+Build a small tcp server that allows other clients to connect to it and send messages,
+connect and retrieve messages(1 at a time)
+
+each customer will have its own queue
+they can read/send messages based on FIFO(queue)

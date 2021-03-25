@@ -1,0 +1,7 @@
+Build a small tcp server that will connect to the same server {you can start them twice}..
+ipadress, port etc..
+once connected allow each party to send text messages to the other.
+
+
+Use the following packages:
+modules, tcp, exception handling with clean code etc.
